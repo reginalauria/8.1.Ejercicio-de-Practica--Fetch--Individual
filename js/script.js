@@ -23,8 +23,8 @@ async function fetchDATA () {
 try {
   let response = await fetch ("json/data.json");
   if (response.ok) {
-    let responseContents=await response.json ();
-  
+    let responseContents=await response.json();
+    showData(responseContents.students);
   } else {
     alert ("HTTP error: " + response.status);
   }
